@@ -1,1 +1,61 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quantum State Zoo — A catalogue of quantum information examples</title><meta name="description" content="An accessible, evolving catalogue of quantum states, ensembles, and channels, with small examples and operational meaning."><link rel="stylesheet" href="style.css"><script defer src="app.js"></script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><header><div class="wrap"><p class="eyebrow">AN OPEN REFERENCE CATALOGUE</p><h1>Quantum State Zoo</h1><p class="lead">Small, explicit examples of the ways quantum information differs from classical probability. Inspired by the <a href="https://quantumalgorithmzoo.org">Quantum Algorithm Zoo</a>.</p><nav><a href="#catalogue">Catalogue</a><a href="#guide">How to read entries</a><a href="#contribute">Contribute</a><a href="https://github.com" id="repository">GitHub</a></nav></div></header><main class="wrap"><section id="guide"><h2>A field guide to quantum information</h2><p>Every specimen has an explicit mathematical construction, an operational task, a dimension statement, a minimality qualification, and a primary-source reference. The smallest example depends on what is being minimized and which operations are allowed.</p><p class="note"><strong>Editorial status:</strong> This is a reconstructed starter edition. Claims, primary-paper attributions, and minimality scopes should be reviewed before it is treated as a definitive scholarly reference. Reference links sometimes point to an early source or a useful survey rather than the first discovery.</p></section><section id="catalogue"><div class="toolbar"><div><h2>Catalogue <span id="count"></span></h2><p>Browse by subject, or search for a concept, author, dimension, or task.</p></div><label>Search <input id="search" type="search" placeholder="e.g. superactivation, PPT, qutrit" autocomplete="off"></label></div><div id="groups" class="chips"></div><div id="entries"></div></section><section id="contribute"><h2>Contribute</h2><p>This is a living reference: propose a correction, improve a proof, add a primary citation, or suggest a provably minimal construction through a GitHub pull request. The repository owner reviews changes before publication.</p><p>Each claim of minimality should specify its allowed operations, the quantity minimized, and either a proof or an exact literature citation.</p></section></main><footer><div class="wrap">Quantum State Zoo · <a href="https://quantumstatezoo.org">quantumstatezoo.org</a> · Independent static website · <span id="updated">Starter edition</span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A field guide to minimal quantum states, ensembles, measurements, and channels: explicit definitions, operational witnesses, dimensional bounds and sources.">
+  <meta name="theme-color" content="#f7f7f3">
+  <title>Quantum State Zoo — A catalogue of quantum phenomena</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], processEscapes: true},
+      options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']},
+      startup: {ready() {MathJax.startup.defaultReady(); MathJax.startup.promise.then(() => window.dispatchEvent(new Event('zoo-mathjax-ready')));}}
+    };
+  </script>
+  <script defer src="app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" onerror="window.zooMathError=true"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <div class="wordmark"><span class="brand-mark" aria-hidden="true">\(\lvert\psi\rangle\)</span><div><p class="overline">An open reference in quantum information</p><h1>Quantum State Zoo</h1></div></div>
+      <p class="dek">A catalogue of small quantum states, ensembles, measurements and channels that illuminate the difference between classical and quantum information.</p>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#catalogue">Catalogue</a><a href="#how-to-read">How to read</a><a href="#contribute">Contribute</a><a href="https://github.com/ampolloreno/quantum-state-zoo" target="_blank" rel="noopener">Repository <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <div class="content-layout">
+      <aside class="sidebar" aria-label="Catalogue navigation">
+        <div class="side-inner">
+          <div class="side-label">Index of phenomena</div>
+          <div id="index-links" class="index-links"><span class="quiet">Loading topics…</span></div>
+          <a class="side-back" href="#top">↑ Back to top</a>
+        </div>
+      </aside>
+      <main>
+        <section class="introduction" id="how-to-read" aria-labelledby="intro-title">
+          <h2 id="intro-title">A field guide to quantum information</h2>
+          <p>Classical probability describes information by probability distributions. Quantum theory adds states that can interfere, measurements that cannot always be reconciled, and multipartite correlations without a classical counterpart. The most useful way to see these differences is through <em>explicit, small examples</em>.</p>
+          <p>Each specimen below states what it is, what operational task reveals its behavior, and how small the construction can be. <strong>Minimality is always relative to a particular task and size measure.</strong> Source links lead to original papers or related references.</p>
+          <p class="editorial-note"><strong>Editorial status.</strong> This is a starter catalogue under scholarly review. Some source links are secondary rather than original publications; some dimension claims are scoped to a task or family. Contributions and corrected citations are welcome.</p>
+        </section>
+        <section class="catalogue" id="catalogue" aria-labelledby="catalogue-title">
+          <div class="section-head"><div><p class="overline">The specimens</p><h2 id="catalogue-title">Catalogue <span id="count" class="count"></span></h2></div><label class="search-label">Search the zoo <input id="search" type="search" placeholder="Try ‘Bell’, ‘erasure’, ‘PPT’…" autocomplete="off"><span class="shortcut">/</span></label></div>
+          <div id="groups" class="filter-strip" aria-label="Filter by phenomenon"></div>
+          <p id="search-status" class="results-note" aria-live="polite"></p>
+          <div id="entries"><p class="quiet">Loading the catalogue…</p></div>
+        </section>
+        <section class="contribute" id="contribute">
+          <h2>Help improve the Zoo</h2>
+          <p>The purpose of this site is to be a useful, corrigible reference, not a collection of unqualified superlatives. A proposed entry should include a succinct mathematical definition, the operational property, the classical or restricted benchmark, a small witness, and a justified size statement.</p>
+          <p>Contribute through <a href="https://github.com/ampolloreno/quantum-state-zoo/issues">issues</a> or <a href="https://github.com/ampolloreno/quantum-state-zoo/pulls">pull requests</a>. All changes are reviewed before publication.</p>
+        </section>
+      </main>
+    </div>
+    <footer class="site-footer"><span>Quantum State Zoo · <a href="https://quantumstatezoo.org">quantumstatezoo.org</a></span><span>Independent, open, static reference · <a href="https://quantumalgorithmzoo.org">Inspired by the Quantum Algorithm Zoo</a></span></footer>
+  </div>
+</body>
+</html>
