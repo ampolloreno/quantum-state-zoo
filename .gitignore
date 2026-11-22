@@ -1,0 +1,8 @@
+
+# Local tooling
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+setup-state.json

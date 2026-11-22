@@ -1,0 +1,492 @@
+[
+  {
+    "id": "coherent-qubit",
+    "name": "Coherent qubit",
+    "group": "Foundations",
+    "dimensions": "2",
+    "formula": "|+\\rangle=(|0\\rangle+|1\\rangle)/\\sqrt2",
+    "operation": "Interference distinguishes coherence from a diagonal mixture in a chosen basis.",
+    "minimality": "Qubit is the smallest nontrivial Hilbert space.",
+    "reference": "https://en.wikipedia.org/wiki/Quantum_superposition"
+  },
+  {
+    "id": "nonorthogonal-states",
+    "name": "Nonorthogonal states",
+    "group": "Foundations",
+    "dimensions": "2",
+    "formula": "\\langle 0|+\\rangle=1/\\sqrt2",
+    "operation": "Two distinct pure states cannot always be perfectly identified or cloned.",
+    "minimality": "Two dimensions suffice, one does not.",
+    "reference": "https://doi.org/10.1038/299802a0"
+  },
+  {
+    "id": "trine-ensemble",
+    "name": "Trine ensemble",
+    "group": "Distinguishability",
+    "dimensions": "2; 3 labels",
+    "formula": "|\\psi_k\\rangle=(|0\\rangle+e^{2\\pi i k/3}|1\\rangle)/\\sqrt2",
+    "operation": "A three-outcome POVM can outperform projective measurements for identifying an ensemble.",
+    "minimality": "Minimal ensemble label count for this qubit separation under the stated task.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.76.2818"
+  },
+  {
+    "id": "tetrahedral-sic",
+    "name": "Tetrahedral SIC",
+    "group": "Measurements",
+    "dimensions": "2; 4 outcomes",
+    "formula": "\\mathrm{tr}(\\Pi_i\\Pi_j)=1/3\\quad(i\\ne j)",
+    "operation": "A symmetric informationally complete measurement reconstructs an unknown qubit state.",
+    "minimality": "Four outcomes are necessary for informational completeness on a qubit.",
+    "reference": "https://arxiv.org/abs/quant-ph/0310075"
+  },
+  {
+    "id": "qubit-mutually-unbiased-bases",
+    "name": "Qubit mutually unbiased bases",
+    "group": "Measurements",
+    "dimensions": "2; 3 bases",
+    "formula": "|\\langle b_i^{(a)}|b_j^{(b)}\\rangle|^2=1/2",
+    "operation": "Measurements with maximally uncertain outcomes across distinct bases.",
+    "minimality": "Three is maximal for a complete set of qubit MUBs.",
+    "reference": "https://doi.org/10.1016/0003-4916(60)90135-7"
+  },
+  {
+    "id": "2-to-1-quantum-random-access-code",
+    "name": "2-to-1 quantum random access code",
+    "group": "Communication",
+    "dimensions": "1 qubit",
+    "formula": "p_{\\rm succ}=\\cos^2(\\pi/8)",
+    "operation": "Encode two bits in one qubit so a receiver can choose which bit to estimate.",
+    "minimality": "One-qubit/one-classical-bit comparison, with no preshared entanglement.",
+    "reference": "https://arxiv.org/abs/quant-ph/9804043"
+  },
+  {
+    "id": "bell-pair",
+    "name": "Bell pair",
+    "group": "Entanglement",
+    "dimensions": "2 × 2",
+    "formula": "|\\Phi^+\\rangle=(|00\\rangle+|11\\rangle)/\\sqrt2",
+    "operation": "Globally pure information can have locally maximally mixed marginals; also violates CHSH.",
+    "minimality": "Smallest bipartite entangled local dimensions.",
+    "reference": "https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195"
+  },
+  {
+    "id": "werner-qubit-state",
+    "name": "Werner qubit state",
+    "group": "Entanglement",
+    "dimensions": "2 × 2",
+    "formula": "\\rho_W=p|\\Psi^-\\rangle\\langle\\Psi^-|+(1-p)I_4/4",
+    "operation": "Entanglement need not violate Bell inequalities under restricted measurements.",
+    "minimality": "Minimal bipartite local dimensions; threshold depends on allowed measurements.",
+    "reference": "https://doi.org/10.1103/PhysRevA.40.4277"
+  },
+  {
+    "id": "separable-discord-state",
+    "name": "Separable discord state",
+    "group": "Correlations",
+    "dimensions": "2 × 2",
+    "formula": "\\rho=\\tfrac12|00\\rangle\\langle00|+\\tfrac12|1+\\rangle\\langle1+|",
+    "operation": "Classically labeled preparations on one side need not have a nondisturbing basis on the other.",
+    "minimality": "Smallest nontrivial bipartite local dimensions.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.105.190502"
+  },
+  {
+    "id": "ghz-state",
+    "name": "GHZ state",
+    "group": "Multipartite",
+    "dimensions": "2 × 2 × 2",
+    "formula": "|\\mathrm{GHZ}\\rangle=(|000\\rangle+|111\\rangle)/\\sqrt2",
+    "operation": "Perfect correlations can contradict deterministic local hidden-variable assignments.",
+    "minimality": "Three qubits are minimal for the tripartite GHZ paradox.",
+    "reference": "https://doi.org/10.1119/1.16243"
+  },
+  {
+    "id": "w-state",
+    "name": "W state",
+    "group": "Multipartite",
+    "dimensions": "2 × 2 × 2",
+    "formula": "|W\\rangle=(|001\\rangle+|010\\rangle+|100\\rangle)/\\sqrt3",
+    "operation": "A genuinely tripartite entangled state that retains entanglement when one subsystem is lost.",
+    "minimality": "Three parties required for this loss-robust tripartite phenomenon.",
+    "reference": "https://arxiv.org/abs/quant-ph/0005115"
+  },
+  {
+    "id": "four-qutrit-ame-state",
+    "name": "Four-qutrit AME state",
+    "group": "Multipartite",
+    "dimensions": "3⁴",
+    "formula": "\\rho_{AB}=I_9/9\\quad\\text{for every two-party subset }AB",
+    "operation": "A pure state with every two-party marginal maximally mixed.",
+    "minimality": "Four qubits cannot realize AME(4,2); four qutrits can.",
+    "reference": "https://arxiv.org/abs/1204.2289"
+  },
+  {
+    "id": "domino-product-basis",
+    "name": "Domino product basis",
+    "group": "Local operations",
+    "dimensions": "3 × 3",
+    "formula": "\\{\\,|a_j\\rangle\\otimes|b_j\\rangle\\,\\}_{j=1}^9",
+    "operation": "A complete orthogonal product basis can be globally readable but not perfectly distinguishable by LOCC.",
+    "minimality": "Dimension minimality is for the original complete-basis phenomenon, not number of states.",
+    "reference": "https://arxiv.org/abs/quant-ph/9804053"
+  },
+  {
+    "id": "three-bell-states",
+    "name": "Three Bell states",
+    "group": "Local operations",
+    "dimensions": "2 × 2; 3 states",
+    "formula": "\\{\\,|\\Phi^+\\rangle,|\\Phi^-\\rangle,|\\Psi^+\\rangle\\,\\}",
+    "operation": "Some orthogonal entangled states cannot be perfectly distinguished by LOCC.",
+    "minimality": "Three among four Bell states form a small canonical obstruction.",
+    "reference": "https://arxiv.org/abs/quant-ph/9807029"
+  },
+  {
+    "id": "kcbs-pentagon",
+    "name": "KCBS pentagon",
+    "group": "Contextuality",
+    "dimensions": "3; 5 projectors",
+    "formula": "\\sum_{i=1}^{5}\\langle P_i\\rangle\\le 2\\ (\\mathrm{NC}),\\qquad\\sqrt5\\ (\\mathrm{QM})",
+    "operation": "Sharp compatible qutrit projectors violate a noncontextual bound.",
+    "minimality": "Dimension three minimal for sharp projective state-dependent contextuality.",
+    "reference": "https://arxiv.org/abs/0706.0126"
+  },
+  {
+    "id": "yu-oh-rays",
+    "name": "Yu–Oh rays",
+    "group": "Contextuality",
+    "dimensions": "3; 13 rays",
+    "formula": "\\mathrm{tr}(\\rho W)>\\beta_{\\mathrm{NC}}\\quad\\forall\\rho",
+    "operation": "A measurement construction reveals contextuality even for the maximally mixed qutrit state.",
+    "minimality": "13 rays minimal for the specified rank-one state-independent setting (cited theorem).",
+    "reference": "https://arxiv.org/abs/1109.4396"
+  },
+  {
+    "id": "peres-mermin-square",
+    "name": "Peres–Mermin square",
+    "group": "Contextuality",
+    "dimensions": "4; 9 observables",
+    "formula": "\\begin{matrix}X\\!\\otimes I&I\\!\\otimes X&X\\!\\otimes X\\\\I\\!\\otimes Y&Y\\!\\otimes I&Y\\!\\otimes Y\\\\X\\!\\otimes Y&Y\\!\\otimes X&Z\\!\\otimes Z\\end{matrix}",
+    "operation": "State-independent contextuality via products of commuting Pauli observables.",
+    "minimality": "Compact parity proof; not minimal in local Hilbert-space dimension.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.65.3373"
+  },
+  {
+    "id": "18-ray-kochen-specker-set",
+    "name": "18-ray Kochen–Specker set",
+    "group": "Contextuality",
+    "dimensions": "4; 18 rays",
+    "formula": "\\sum_{v\\in B}\\nu(v)=1\\quad\\text{for each orthonormal basis }B",
+    "operation": "No noncontextual 0–1 assignment satisfies the orthogonality constraints.",
+    "minimality": "18 rays minimum for Kochen–Specker sets in any dimension, under standard definition.",
+    "reference": "https://arxiv.org/abs/quant-ph/9706009"
+  },
+  {
+    "id": "tiles-upb-bound-entanglement",
+    "name": "Tiles UPB bound entanglement",
+    "group": "Bound entanglement",
+    "dimensions": "3 × 3",
+    "formula": "\\rho_{\\rm Tiles}=\\tfrac14\\bigl(I_9-\\sum_{j=1}^{5}|u_j\\rangle\\langle u_j|\\bigr)",
+    "operation": "A projector onto a subspace with no product vector is entangled yet PPT.",
+    "minimality": "Smallest equal local dimension supporting PPT entanglement.",
+    "reference": "https://arxiv.org/abs/quant-ph/9808030"
+  },
+  {
+    "id": "shifts-upb",
+    "name": "Shifts UPB",
+    "group": "Bound entanglement",
+    "dimensions": "2 × 2 × 2",
+    "formula": "\\rho\\propto I-\\sum_j|u_j\\rangle\\langle u_j|",
+    "operation": "An unextendible product basis produces multipartite bound-entangled structure.",
+    "minimality": "Small canonical three-qubit unextendible product basis; no general minimum claimed.",
+    "reference": "https://arxiv.org/abs/quant-ph/9808030"
+  },
+  {
+    "id": "horodecki-ppt-entangled-state",
+    "name": "Horodecki PPT entangled state",
+    "group": "Bound entanglement",
+    "dimensions": "2 × 4",
+    "formula": "\\rho^{T_B}\\succeq 0\\qquad\\rho\\notin\\mathrm{SEP}",
+    "operation": "Positive partial transpose fails to characterize separability in this dimension.",
+    "minimality": "Minimum total bipartite Hilbert-space dimension is eight.",
+    "reference": "https://arxiv.org/abs/quant-ph/9703004"
+  },
+  {
+    "id": "smolin-unlockable-state",
+    "name": "Smolin unlockable state",
+    "group": "Bound entanglement",
+    "dimensions": "2⁴",
+    "formula": "\\rho_S=\\tfrac14\\sum_{j=0}^3|\\Phi_j\\rangle\\langle\\Phi_j|_{AB}\\otimes|\\Phi_j\\rangle\\langle\\Phi_j|_{CD}",
+    "operation": "Bound entanglement across partitions can be unlocked when parties collaborate.",
+    "minimality": "Canonical four-qubit example; global minimum not asserted.",
+    "reference": "https://arxiv.org/abs/quant-ph/0001001"
+  },
+  {
+    "id": "werner-data-hiding-states",
+    "name": "Werner data hiding states",
+    "group": "Local operations",
+    "dimensions": "d × d",
+    "formula": "\\rho_{\\pm}=\\frac{2P_{\\pm}}{d(d\\pm1)}",
+    "operation": "Globally distinguishable states can be hard to distinguish by LOCC.",
+    "minimality": "Dimension-dependent hiding; this entry does not claim smallest dimension for arbitrary separation.",
+    "reference": "https://arxiv.org/abs/quant-ph/0103098"
+  },
+  {
+    "id": "antisymmetric-qutrit-state",
+    "name": "Antisymmetric qutrit state",
+    "group": "Entanglement",
+    "dimensions": "3 × 3",
+    "formula": "\\rho_{-}=P_{-}/3",
+    "operation": "The antisymmetric subspace supplies a compact source of entanglement and symmetry-based calculations.",
+    "minimality": "Three is the smallest local dimension with antisymmetric subspace dimension greater than one.",
+    "reference": "https://doi.org/10.1103/PhysRevA.40.4277"
+  },
+  {
+    "id": "qubit-t-magic-state",
+    "name": "Qubit T magic state",
+    "group": "Magic",
+    "dimensions": "2",
+    "formula": "|T\\rangle=(|0\\rangle+e^{i\\pi/4}|1\\rangle)/\\sqrt2",
+    "operation": "Outside the stabilizer polytope, a nonstabilizer state supplies computational magic.",
+    "minimality": "Smallest nontrivial system in the stabilizer resource theory.",
+    "reference": "https://arxiv.org/abs/quant-ph/0403025"
+  },
+  {
+    "id": "qutrit-strange-magic-state",
+    "name": "Qutrit Strange magic state",
+    "group": "Magic",
+    "dimensions": "3",
+    "formula": "|S\\rangle=(|1\\rangle-|2\\rangle)/\\sqrt2",
+    "operation": "Discrete Wigner negativity is a resource for qutrit magic-state computation.",
+    "minimality": "Canonical qutrit example; no cross-dimension minimum claimed.",
+    "reference": "https://arxiv.org/abs/quant-ph/0602001"
+  },
+  {
+    "id": "half-erasure-channel",
+    "name": "Half-erasure channel",
+    "group": "Channels",
+    "dimensions": "2 → 3",
+    "formula": "\\mathcal E_{1/2}(\\rho)=\\tfrac12\\rho\\oplus\\tfrac12|e\\rangle\\langle e|",
+    "operation": "A flagged channel can have zero quantum capacity despite sometimes transmitting perfectly.",
+    "minimality": "Minimum input is a qubit within standard orthogonally flagged erasures.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.78.3217"
+  },
+  {
+    "id": "dephasing-channel",
+    "name": "Dephasing channel",
+    "group": "Channels",
+    "dimensions": "2 → 2",
+    "formula": "\\mathcal D_p(\\rho)=(1-p)\\rho+p Z\\rho Z",
+    "operation": "Classical basis information survives while relative phase degrades.",
+    "minimality": "One qubit gives the smallest nontrivial phase-noise channel.",
+    "reference": "https://doi.org/10.1103/PhysRevA.54.1869"
+  },
+  {
+    "id": "amplitude-damping-channel",
+    "name": "Amplitude damping channel",
+    "group": "Channels",
+    "dimensions": "2 → 2",
+    "formula": "K_0=|0\\rangle\\langle0|+\\sqrt{1-\\gamma}|1\\rangle\\langle1|",
+    "operation": "Energy relaxation is not the same as erasure or dephasing.",
+    "minimality": "Single-qubit minimal example of nonunital noise.",
+    "reference": "https://doi.org/10.1103/PhysRevA.54.1869"
+  },
+  {
+    "id": "depolarizing-channel",
+    "name": "Depolarizing channel",
+    "group": "Channels",
+    "dimensions": "2 → 2",
+    "formula": "\\mathcal D_p(\\rho)=(1-p)\\rho+pI_2/2",
+    "operation": "Isotropic noise contracts Bloch vectors and provides a benchmark for coding.",
+    "minimality": "Single-qubit minimal nontrivial depolarization.",
+    "reference": "https://doi.org/10.1103/PhysRevA.54.1869"
+  },
+  {
+    "id": "qutrit-platypus-channel",
+    "name": "Qutrit Platypus channel",
+    "group": "Channels",
+    "dimensions": "3 → 3; env 2",
+    "formula": "V|0\\rangle=(|00\\rangle+|11\\rangle)/\\sqrt2,\\quad V|j\\rangle=|2,j-1\\rangle\\ (j=1,2)",
+    "operation": "A single use carries one exact private classical bit while quantum capacity remains below one qubit.",
+    "minimality": "Smallest input/output/environment dimensions for this exact operational separation.",
+    "reference": "https://arxiv.org/abs/2202.08380"
+  },
+  {
+    "id": "platypus-capacity-superadditivity",
+    "name": "Platypus capacity superadditivity",
+    "group": "Activation",
+    "dimensions": "5 → 5 plus erasure",
+    "formula": "Q(M⊗E)>Q(M)+Q(E)",
+    "operation": "Two different channels can transmit quantum information better jointly than independently.",
+    "minimality": "Explicit capacity separation; no global dimension minimum established.",
+    "reference": "https://arxiv.org/abs/2202.08377"
+  },
+  {
+    "id": "smith-yard-superactivation",
+    "name": "Smith–Yard superactivation",
+    "group": "Activation",
+    "dimensions": "4 → 4 plus 4 → 5",
+    "formula": "Q(\\mathcal N)=Q(\\mathcal E)=0,\\qquad Q(\\mathcal N\\otimes\\mathcal E)>0",
+    "operation": "A private PPT channel plus half-erasure activates quantum capacity.",
+    "minimality": "Explicit construction; global minimality open or not established here.",
+    "reference": "https://arxiv.org/abs/0807.4935"
+  },
+  {
+    "id": "werner-holevo-channel",
+    "name": "Werner–Holevo channel",
+    "group": "Channels",
+    "dimensions": "3 → 3",
+    "formula": "\\mathcal N(\\rho)=\\tfrac12(\\mathrm{tr}(\\rho)I-\\rho^T)",
+    "operation": "A simple transpose-depolarizing channel exhibits unusual output-purity behavior.",
+    "minimality": "Small canonical counterexample; no general minimality theorem asserted.",
+    "reference": "https://arxiv.org/abs/quant-ph/0203003"
+  },
+  {
+    "id": "three-qubit-repetition-code",
+    "name": "Three-qubit repetition code",
+    "group": "Error correction",
+    "dimensions": "3 qubits",
+    "formula": "|0_L\\rangle=|000\\rangle,\\quad|1_L\\rangle=|111\\rangle",
+    "operation": "Correct a single bit-flip error via redundant quantum encoding.",
+    "minimality": "Three physical qubits minimal for single-X-error repetition, not arbitrary errors.",
+    "reference": "https://doi.org/10.1103/PhysRevA.51.2738"
+  },
+  {
+    "id": "four-qubit-erasure-code",
+    "name": "Four-qubit erasure code",
+    "group": "Error correction",
+    "dimensions": "4 qubits",
+    "formula": "|0_L\\rangle=(|0000\\rangle+|1111\\rangle)/\\sqrt2",
+    "operation": "A known erased location can be corrected with a small quantum code.",
+    "minimality": "Small canonical one-erasure code; minimum depends on code parameters.",
+    "reference": "https://arxiv.org/abs/quant-ph/9604034"
+  },
+  {
+    "id": "five-qubit-perfect-code",
+    "name": "Five-qubit perfect code",
+    "group": "Error correction",
+    "dimensions": "5 qubits",
+    "formula": "[[5,1,3]]",
+    "operation": "Encode one qubit while correcting an arbitrary single-qubit error.",
+    "minimality": "Five physical qubits minimal by the quantum Hamming bound.",
+    "reference": "https://arxiv.org/abs/quant-ph/9602019"
+  },
+  {
+    "id": "qutrit-quantum-secret-sharing",
+    "name": "Qutrit quantum secret sharing",
+    "group": "Cryptography",
+    "dimensions": "3 qutrits",
+    "formula": "|s\\rangle\\mapsto\\sum_{j,k}c_{s,j,k}|j,k,s-j-k\\rangle",
+    "operation": "Authorized shares reconstruct a quantum secret; unauthorized shares reveal nothing.",
+    "minimality": "Canonical threshold example; exact lower bound depends on access structure.",
+    "reference": "https://arxiv.org/abs/quant-ph/9901025"
+  },
+  {
+    "id": "private-bit-pbit",
+    "name": "Private bit (pbit)",
+    "group": "Cryptography",
+    "dimensions": "2 × 2 key + shield",
+    "formula": "\\gamma=U(|\\Phi^+\\rangle\\langle\\Phi^+|\\otimes\\sigma)U^\\dagger",
+    "operation": "A twisted private state carries a secure classical key even when entanglement distillation is limited.",
+    "minimality": "Requires nontrivial key subsystem; shield minimality not asserted.",
+    "reference": "https://arxiv.org/abs/quant-ph/0506189"
+  },
+  {
+    "id": "quantum-one-time-pad",
+    "name": "Quantum one-time pad",
+    "group": "Cryptography",
+    "dimensions": "1 qubit; 2 key bits",
+    "formula": "\\frac14\\sum_{a,b\\in\\{0,1\\}}X^aZ^b\\rho Z^bX^a=I_2/2",
+    "operation": "Encrypt an arbitrary qubit with perfect information-theoretic secrecy.",
+    "minimality": "Two classical secret bits necessary for encrypting an arbitrary qubit exactly.",
+    "reference": "https://arxiv.org/abs/quant-ph/9602022"
+  },
+  {
+    "id": "hardy-paradox",
+    "name": "Hardy paradox",
+    "group": "Nonlocality",
+    "dimensions": "2 × 2",
+    "formula": "P(1,1|1,1)>0\\quad\\text{with three designated zero events}",
+    "operation": "Nonlocality without inequalities from a small set of logically incompatible probabilities.",
+    "minimality": "Two qubits form a minimal bipartite pure-state setting.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.71.1665"
+  },
+  {
+    "id": "pbr-preparation-exclusion",
+    "name": "PBR preparation exclusion",
+    "group": "Foundations",
+    "dimensions": "2 qubits",
+    "formula": "\\psi\\text{-epistemic overlap}\\Rightarrow\\text{incompatible joint outcome probabilities}",
+    "operation": "Independent preparations constrain models in which a pure state represents mere knowledge.",
+    "minimality": "Minimality depends on overlap and preparation-independence assumptions.",
+    "reference": "https://arxiv.org/abs/1111.3328"
+  },
+  {
+    "id": "leggett-garg-temporal-correlations",
+    "name": "Leggett–Garg temporal correlations",
+    "group": "Foundations",
+    "dimensions": "single qubit",
+    "formula": "K=C_{12}+C_{23}-C_{13}\\le1",
+    "operation": "Sequential measurements can violate a classical macrorealism benchmark.",
+    "minimality": "One qubit is a minimal nontrivial sequential quantum system.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.54.857"
+  },
+  {
+    "id": "quantum-hedging",
+    "name": "Quantum hedging",
+    "group": "Operational paradoxes",
+    "dimensions": "2 rounds",
+    "formula": "P(\\text{win at least one})=1\\quad\\text{without independent perfect wins}",
+    "operation": "Correlated quantum strategies can hedge outcomes across repeated interactive tests.",
+    "minimality": "Two tests are needed to exhibit a nontrivial hedging advantage.",
+    "reference": "https://arxiv.org/abs/1106.4421"
+  },
+  {
+    "id": "kirkwood-dirac-quasiprobability",
+    "name": "Kirkwood–Dirac quasiprobability",
+    "group": "Quasiprobability",
+    "dimensions": "2",
+    "formula": "q(a,b)=\\langle b|a\\rangle\\langle a|\\rho|b\\rangle",
+    "operation": "A joint-looking quasiprobability may be negative or complex for incompatible observables.",
+    "minimality": "Qubit is the smallest nontrivial dimension for incompatible bases.",
+    "reference": "https://doi.org/10.1103/PhysRev.44.31"
+  },
+  {
+    "id": "universal-qubit-cloning",
+    "name": "Universal qubit cloning",
+    "group": "Distinguishability",
+    "dimensions": "1 → 2 qubits",
+    "formula": "F_{1\\to2}=5/6",
+    "operation": "Approximate unknown-state copying is possible although perfect universal cloning is not.",
+    "minimality": "Qubit minimal nontrivial input; optimality is a cited theorem.",
+    "reference": "https://doi.org/10.1103/PhysRevLett.77.1985"
+  },
+  {
+    "id": "coherent-optical-state",
+    "name": "Coherent optical state",
+    "group": "Continuous variables",
+    "dimensions": "infinite-dimensional",
+    "formula": "|\\alpha\\rangle=e^{-|\\alpha|^2/2}\\sum_{n\\ge0}\\alpha^n|n\\rangle/\\sqrt{n!}",
+    "operation": "Classical benchmark for optical field states and positive Glauber–Sudarshan representations.",
+    "minimality": "Continuous-variable example; finite-dimensional minimum not applicable.",
+    "reference": "https://doi.org/10.1103/PhysRev.131.2766"
+  },
+  {
+    "id": "squeezed-vacuum",
+    "name": "Squeezed vacuum",
+    "group": "Continuous variables",
+    "dimensions": "infinite-dimensional",
+    "formula": "\\mathrm{Var}(X)=e^{-2r}/2<1/2",
+    "operation": "Quadrature noise below vacuum excludes mixtures of coherent optical states.",
+    "minimality": "Continuous-variable example; no finite-dimensional minimum claimed.",
+    "reference": "https://doi.org/10.1103/PhysRevA.13.2226"
+  },
+  {
+    "id": "single-photon-fock-state",
+    "name": "Single-photon Fock state",
+    "group": "Continuous variables",
+    "dimensions": "infinite-dimensional",
+    "formula": "|1\\rangle=a^\\dagger|0\\rangle",
+    "operation": "Photon-number definiteness and antibunching distinguish a single-photon state from classical coherent light.",
+    "minimality": "Optical mode example; dimension comparison depends on truncation.",
+    "reference": "https://doi.org/10.1103/PhysRev.131.2766"
+  }
+]
